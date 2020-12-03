@@ -2,21 +2,21 @@
 //brugte packages: express, mongoose, dotenv (hiding passwords etc.)
 
 const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-require('dotenv/config');
+//const mongoose = require('mongoose');
+//const bodyParser = require('body-parser');
+//require('dotenv/config');
 
 //sætter app til at indeholde funktionerne fra express, express kan bruges til at lave routes
 const app = express();
 
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
 
 
 //routes
-const postsRoute = require('../routes/posts')
+//const postsRoute = require('../routes/posts')
 
 //middleware til posts routes
-app.use('../routes/posts', postsRoute);
+//app.use('../routes/posts', postsRoute);
 
 
 
@@ -25,15 +25,16 @@ app.use('../routes/posts', postsRoute);
 
 
 
-const path = require("path");
+//const path = require("path");
 
 //app.use(cors())
 
-//connecter til databasen
+/*connecter til databasen
 mongoose.connect(
   process.env.DB_CONNECTION,
 { useNewUrlParser: true, useUnifiedTopology: true },
 () => console.log('connected to DB'))
+*/
 
 //sætter serveren til at lytte på port 8010
 const server = app.listen(8010, () =>{
