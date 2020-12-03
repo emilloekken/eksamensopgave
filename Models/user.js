@@ -19,7 +19,16 @@ const UserSchema = mongoose.Schema({
     Password: {
         type: String, 
         required: true
+    },
+    /*Birthday: {
+        type: Date,
+        required: true
+        
+    },*/
+    Gender: {
+        type: String,
+        required: true
     }
 })
 
-module.exports = mongoose.model('Posts', UserSchema)
+module.exports = mongoose.model('User', UserSchema)
