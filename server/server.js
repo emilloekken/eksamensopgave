@@ -15,12 +15,12 @@ const path = require("path");
 
 //app.use(cors())
 
-//sætter serveren til at lytte på port 4000
+//sætter serveren til at lytte på port 5500
 const server = app.listen(5500, () =>{
   console.log('listening on port %s...', server.address().port)
 }); 
 
-//laver en route til at fortælle os om serveren er oppe og køre
+//laver en route til vores index.html
 app.get("/", function( req,res){
   let reqPath = path.join(__dirname, '../')
   console.log(reqPath)
